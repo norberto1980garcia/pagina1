@@ -1,0 +1,379 @@
+
+    /* 🎨 Estilos generales */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: #fff;
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+     /* ====== Contenedor principal ====== */
+    button {
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #00ffcc, #0014ff);
+      color: #fff;
+    }
+
+    /* ✅ Contenedor principal desktop */
+    .contenedor {
+      width: 1440px;
+      height: auto;   /* alto fijo desktop */
+      margin: 0 auto;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    /* ✅ Tachado + azul */
+    .tachado { text-decoration: line-through; }
+    
+
+    /* 🔹 Header */
+    header {
+      background: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #f0f0f0;
+      
+    }
+
+    .logo {
+      width: 36px;
+      height: 36px;
+      background-color: #0014ff;
+      color: white;
+      font-weight: bold;
+      font-family: 'IBMPlexMono;', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+    }
+
+    /* Menú hamburguesa */
+    .menu-btn {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      margin-left: auto; /* 👈 lo manda a la derecha */
+    }
+    #menu-toggle {
+      display: none;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ffcc;
+    }
+
+    nav a:active {
+      color: #0014ff;
+    }
+
+    /* 🔹 Hero */
+    #hero {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; 
+      padding: 80px 200px;
+      background: white;
+      position: relative;
+    }
+    #hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    #hero p {
+      max-width: 500px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    /* Botón "Conocé más" */
+    #hero button {
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      transition: all 0.3s ease;
+    }
+    #hero button:hover {
+      background: #0014ff;
+      color: #fff;
+    }
+
+    /* 🔹 Episodios */
+    #episodios {
+      
+      background-image: linear-gradient(225deg, #0014FF 0%, #00008b 100%);
+      clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+      color: white;
+      padding: 150px 0;
+      }
+
+      
+    .episodios-titulo {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: white;
+      padding-left: 200px;
+    }
+
+    .episodios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    /* ANTES: padding: 40px 200px; */
+    max-width: 1210px; /* Le damos un ancho máximo (584px * 2 + 40px de gap) */
+    margin: 40px auto; /* Centramos la grilla horizontalmente y mantenemos el margen vertical */
+    padding: 0 20px; /* Agregamos un pequeño padding para seguridad en pantallas más chicas */
+}
+ 
+.episodios-grid img {
+    /* ANTES: width: 584px; */
+    width: 100%; /* La imagen ocupa el 100% de su celda en la grilla */
+    height: auto; /* El alto se ajusta para no deformar la imagen */
+    aspect-ratio: 584 / 232; /* Mantiene la proporción original de la imagen */
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+    .episodios-grid a:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* 🔹 Teléfono + Texto en fila */
+.nosotros-telefono {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px;
+  max-width: 1400px;
+  margin: -80px auto 80px auto; /* ya no lo subimos tanto, dejamos margen normal */
+  padding: 40px 20px;
+  position: relative;
+  z-index: 5; /* asegura que se vea sobre el fondo */
+}
+
+.telefono-izquierda img {
+  width: 320px;
+  max-width: 100%;
+  margin-top: -60px;  /* esto sube SOLO el celular */
+  z-index: 10;
+  position: relative;
+}
+
+.texto-derecha {
+  flex: 1;
+  text-align: left;
+   max-width: 600px; /* controla el ancho del bloque */
+  padding-left: 60px;/* separa el texto del celular */
+margin-top:50px;/* sube el texto junto con el celular */
+}
+
+.texto-derecha h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+
+    /* 🔹 Invitados */
+    .invitados h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+    .grid-invitados {
+      display: grid;
+      grid-template-columns: repeat(3, 480px);
+      gap: 0px;
+      justify-content: center;
+      margin: 0 auto;
+      }
+
+    .grid-invitados img {
+      width: 480px;
+      height: 364px;
+      object-fit: cover;       /* recorta o ajusta para llenar sin deformar */
+      display: block;
+    }
+
+    /* 🔹 Temas */
+    .temas {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .temas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .temas-grid img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+    .temas-grid p {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* 🔹 CTA */
+    #cta {
+      background: #0014ff;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    
+    /* 🔹 Footer */
+footer {
+  background: #fff;
+  padding: 20px 0px;
+  border-top: 1px solid #eee;
+}
+
+.footer-container {
+  max-width: 1440px;        /* límite de ancho */
+  margin: 0 auto;            /* centrado */
+  padding: 0 40px;        /* espacio a los costados */
+  display: flex;
+  justify-content: space-between; /* texto izq - redes der */
+  align-items: center;
+}
+footer p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  color: #060A24;
+  line-height: 28px;
+  margin: 0;
+}
+
+footer .social a {
+  margin-left: 20px;
+  color: #060a24;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+footer .social a:hover {
+  color: #0014ff; /* azul hover */
+}
+    /* 📱 Versión Mobile - todo en 1 columna */
+    @media (max-width: 480px) {
+      
+      .contenedor {
+        width: 100%;
+        height: auto;       /* en mobile no forzamos altura fija */
+        max-width: 320px;
+        min-height: 5436px; /* altura mínima según diseño */
+      }
+
+      header {
+        height: 44px;
+        padding: 0 10px;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #0014ff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+      }
+      #menu-toggle:checked ~ nav ul {
+        display: flex;
+      }
+      .menu-btn {
+        display: block;
+      }
+
+      /* Hero */
+      #hero {
+        padding: 20px;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      /* Episodios: 1 columna */
+      .episodios-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+      }
+
+      /* Nosotros */
+      .nosotros-contenedor {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 20px;
+      }
+      .nosotros-contenedor img {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      /* Invitados: 1 columna */
+      .grid-invitados {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+      }
+
+      /* Temas: 1 columna */
+      .temas-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+      .temas-grid div {
+        text-align: center;
+      }
+    }
+  
